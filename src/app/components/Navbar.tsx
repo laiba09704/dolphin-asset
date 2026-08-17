@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="relative">
       {/* Top Contact Bar */}
-      <div className="hidden md:flex w-full bg-[#01286D] justify-between items-center px-10 py-2">
+      <div className="hidden xl:flex w-full bg-[#01286D] justify-between items-center px-10 py-2">
         <div className="flex items-center ml-24">
           <Image
             src="/images/navbar/ICTT.png"
@@ -61,9 +61,9 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full bg-white flex justify-between items-center px-6 md:px-10 py-3 shadow-sm">
+      <div className="w-full bg-white flex justify-between items-center px-6 xl:px-10 py-3 shadow-sm">
         {/* Logo */}
-        <div className="flex items-center md:ml-24">
+        <div className="flex items-center xl:ml-24">
           <Image
             src="/images/navbar/logo.png"
             alt="Dolphin Asset Integrity Solutions"
@@ -71,12 +71,12 @@ export default function Navbar() {
             height={50}
             unoptimized
             quality={100}
-            className="w-[140px] md:w-[180px] h-auto"
+            className="w-[140px] xl:w-[180px] h-auto"
           />
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 -ml-24 text-[12px] font-medium text-[#434343]">
+        <div className="hidden xl:flex items-center gap-8 -ml-24 text-[12px] font-medium text-[#434343]">
           <a href="/" className="text-[#FD550A] font-semibold">
             HOME
           </a>
@@ -99,7 +99,7 @@ export default function Navbar() {
         </div>
 
         {/* Request a Quote Button */}
-        <div className="hidden md:block mr-24">
+        <div className="hidden xl:block mr-24">
           <a
             href="/quote"
             className="flex items-center gap-2  bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition"
@@ -117,7 +117,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger Menu Button */}
-        <div className="md:hidden flex items-center">
+        <div className="xl:hidden flex items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-[#01286D] focus:outline-none"
@@ -135,7 +135,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-4 space-y-4 z-50">
+        <div className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-4 space-y-4 z-50">
           <a href="/" className="text-[#FD550A] font-semibold">
             HOME
           </a>
