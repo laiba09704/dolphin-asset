@@ -358,106 +358,260 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 6: Leadership (Core Team) with exact staggered layout */}
-      <section className="w-full py-20 px-4 md:px-16 lg:px-24" style={{ backgroundColor: '#E9F3FF80' }}>
+      {/* Section 6: Leadership (Core Team) */}
+      <section className="w-full py-20 px-4 md:px-16 lg:px-24" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="max-w-7xl mx-auto">
+          
           {/* Header Area */}
-          <div className="mb-12">
-            <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-2 text-[#FD550A]">
+          <div className="mb-14 pl-4 border-l-4 border-[#FD550A]">
+            <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-1 text-[#FD550A]">
               Core Team
             </h3>
-            <h2 className="font-source-serif-pro font-bold text-[#01286D] text-[42px] leading-[110%] tracking-[2%] mb-3">
+            <h2 className="font-source-serif-pro font-bold text-[#01286D] text-[42px] leading-[110%] tracking-[2%] mb-2">
               Leadership
             </h2>
-            <div className="mb-4">
-              <Image src="/images/about/barline.png" alt="Divider" width={100} height={4} />
-            </div>
-            <p className="font-montserrat font-normal text-[#434343] text-[16.59px] leading-[175%] max-w-2xl text-justify md:text-left">
+            <p className="font-montserrat font-normal text-[#434343] text-[16px] leading-[175%] max-w-xl">
               Four directors accountable for engineering, commercial, financial and operational delivery on every project.
             </p>
           </div>
 
-          {/* Staggered Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {/* Exact Interlocking Staggered Grid Layout */}
+          <div className="flex flex-col gap-6">
             
-            {/* 1. Chief Executive Officer (Blue Box - Left) */}
-            <div className="bg-[#01286D] text-white p-8 md:p-12 rounded-[12px] relative overflow-hidden flex flex-col justify-between min-h-[300px] shadow-sm">
-              <div className="absolute right-6 top-4 pointer-events-none select-none">
-                <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-white/10">
-                  01
-                </span>
+            {/* Row 1 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+              <div className="bg-[#01286D] text-white p-8 md:p-12 rounded-[4px] relative overflow-hidden flex flex-col justify-between min-h-[280px] shadow-sm">
+                <div className="absolute right-6 top-2 pointer-events-none select-none">
+                  <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-white/10 tracking-tighter">
+                    01
+                  </span>
+                </div>
+                <div className="z-10">
+                  <span className="inline-block px-3 py-1 bg-[#FD550A] text-white font-montserrat font-semibold text-[11px] tracking-[1px] uppercase rounded-[2px] mb-4">
+                    Chief Executive Officer
+                  </span>
+                  <h3 className="font-source-serif-pro font-bold text-[32px] md:text-[38px] leading-[115%] tracking-[2%] text-white">
+                    Muhammad Tariq Khan
+                  </h3>
+                </div>
+                <div className="w-[100px] h-[4px] bg-[#FD550A] mt-6 z-10" />
               </div>
-              <div className="z-10">
-                <span className="inline-block px-3 py-1 bg-[#FD550A] text-white font-montserrat font-semibold text-[11px] tracking-[1.5px] uppercase rounded-[4px] mb-4">
-                  Chief Executive Officer
-                </span>
-                <h3 className="font-source-serif-pro font-bold text-[30px] md:text-[38px] leading-[115%] tracking-[2%] text-white">
-                  Muhammad Tariq Khan
-                </h3>
-              </div>
-              <div className="w-[100px] h-[4px] bg-[#FD550A] mt-8 z-10" />
-            </div>
 
-            {/* 2. Director Commercial (Transparent Box - Right) */}
-            <div className="bg-transparent border border-[#01286D]/20 p-8 md:p-12 rounded-[12px] relative overflow-hidden flex flex-col justify-between min-h-[300px]">
-              <div className="absolute right-6 top-4 pointer-events-none select-none">
-                <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-[#01286D]/10">
-                  02
-                </span>
-              </div>
-              <div className="z-10">
-                <span className="inline-block text-[#FD550A] font-montserrat font-semibold text-[13px] tracking-[1.5px] uppercase mb-4">
-                  Director Commercial
-                </span>
-                <h3 className="font-source-serif-pro font-bold text-[30px] md:text-[38px] leading-[115%] tracking-[2%] text-[#01286D]">
-                  Rana Muhammad Hamad
-                </h3>
-              </div>
-            </div>
-
-            {/* 3. Director Finance (Transparent Box - Left) */}
-            <div className="bg-transparent border border-[#01286D]/20 p-8 md:p-12 rounded-[12px] relative overflow-hidden flex flex-col justify-between min-h-[300px]">
-              <div className="absolute right-6 top-4 pointer-events-none select-none">
-                <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-[#01286D]/10">
-                  03
-                </span>
-              </div>
-              <div className="z-10">
-                <span className="inline-block text-[#FD550A] font-montserrat font-semibold text-[13px] tracking-[1.5px] uppercase mb-4">
-                  Director Finance
-                </span>
-                <h3 className="font-source-serif-pro font-bold text-[30px] md:text-[38px] leading-[115%] tracking-[2%] text-[#01286D]">
-                  Muhammad Rashid Khan
-                </h3>
+              <div className="bg-transparent p-8 md:p-12 rounded-[4px] relative overflow-hidden flex flex-col justify-between min-h-[280px]">
+                <div className="absolute right-6 bottom-[-10px] pointer-events-none select-none">
+                  <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-[#01286D]/10 tracking-tighter">
+                    02
+                  </span>
+                </div>
+                <div className="z-10">
+                  <span className="inline-block text-[#FD550A] font-montserrat font-semibold text-[13px] tracking-[1px] uppercase mb-3">
+                    Director Commercial
+                  </span>
+                  <h3 className="font-source-serif-pro font-bold text-[32px] md:text-[38px] leading-[115%] tracking-[2%] text-[#01286D]">
+                    Rana Muhammad Hamad
+                  </h3>
+                </div>
               </div>
             </div>
 
-            {/* 4. Operations & Technical (Blue Box - Right) */}
-            <div className="bg-[#01286D] text-white p-8 md:p-12 rounded-[12px] relative overflow-hidden flex flex-col justify-between min-h-[300px] shadow-sm">
-              <div className="absolute right-6 top-4 pointer-events-none select-none">
-                <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-white/10">
-                  04
-                </span>
+            {/* Row 2 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+              <div className="bg-transparent p-8 md:p-12 rounded-[4px] relative overflow-hidden flex flex-col justify-between min-h-[280px]">
+                <div className="absolute left-6 bottom-[-10px] pointer-events-none select-none">
+                  <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-[#01286D]/10 tracking-tighter">
+                    03
+                  </span>
+                </div>
+                <div className="z-10 mt-auto">
+                  <span className="inline-block text-[#FD550A] font-montserrat font-semibold text-[13px] tracking-[1px] uppercase mb-3">
+                    Director Finance
+                  </span>
+                  <h3 className="font-source-serif-pro font-bold text-[32px] md:text-[38px] leading-[115%] tracking-[2%] text-[#01286D]">
+                    Muhammad Rashid Khan
+                  </h3>
+                </div>
               </div>
-              <div className="z-10">
-                <span className="inline-block px-3 py-1 bg-[#FD550A] text-white font-montserrat font-semibold text-[11px] tracking-[1.5px] uppercase rounded-[4px] mb-4">
-                  Operations & Technical
-                </span>
-                <h3 className="font-source-serif-pro font-bold text-[30px] md:text-[38px] leading-[115%] tracking-[2%] text-white">
-                  Muhammad Maaz Ahsan
-                </h3>
+
+              <div className="bg-[#01286D] text-white p-8 md:p-12 rounded-[4px] relative overflow-hidden flex flex-col justify-between min-h-[280px] shadow-sm">
+                <div className="absolute left-6 top-2 pointer-events-none select-none">
+                  <span className="font-source-serif-pro font-normal text-[120px] md:text-[140px] leading-none text-white/10 tracking-tighter">
+                    04
+                  </span>
+                </div>
+                <div className="z-10 ml-auto text-right w-full">
+                  <span className="inline-block px-3 py-1 bg-[#FD550A] text-white font-montserrat font-semibold text-[11px] tracking-[1px] uppercase rounded-[2px] mb-4">
+                    Operations & Technical
+                  </span>
+                  <h3 className="font-source-serif-pro font-bold text-[32px] md:text-[38px] leading-[115%] tracking-[2%] text-white">
+                    Muhammad Maaz Ahsan
+                  </h3>
+                </div>
+                <div className="w-[100px] h-[4px] bg-[#FD550A] mt-6 ml-auto z-10" />
               </div>
-              <div className="w-[100px] h-[4px] bg-[#FD550A] mt-8 z-10" />
             </div>
 
           </div>
 
-          {/* Bottom Footer Note inside Leadership section */}
-          <div className="mt-14 pt-6 border-t border-[#01286D]/20">
-            <p className="font-montserrat font-normal text-[#434343] text-[15px] leading-[175%] max-w-4xl text-justify">
+          <div className="mt-14 pl-4 border-l-4 border-[#FD550A]">
+            <p className="font-montserrat font-normal text-[#434343] text-[15.5px] leading-[175%] max-w-4xl text-justify">
               With an established client base and successful operations under DES, we are now expanding our capabilities through DAIS — a new identity designed to serve clients while building on enhanced technical expertise and our team.
             </p>
           </div>
+
+        </div>
+      </section>
+
+      {/* Section 7: Industries We Serve & Sublime Family of Dolphin */}
+      <section className="w-full bg-white py-20 px-4 md:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* Industries We Serve Header */}
+          <div className="mb-12">
+            <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-2 text-[#FD550A]">
+              Industry Coverage
+            </h3>
+            <h2 className="font-source-serif-pro font-bold text-[#01286D] text-[42px] leading-[110%] tracking-[2%] mb-3">
+              Industries We Serve
+            </h2>
+            <div className="mb-4">
+              <Image src="/images/about/barline.png" alt="Divider" width={100} height={4} />
+            </div>
+            <p className="font-montserrat font-normal text-[#434343] text-[16.59px] leading-[175%] max-w-3xl">
+              DAIS supports industries where equipment safety, operational continuity, accurate measurement, regulatory compliance, and asset reliability are critical.
+            </p>
+          </div>
+
+          {/* Three Industry Cards Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
+            
+            {/* Card 1: Energy & Process Industries */}
+            <div 
+              className="bg-[#EFF6FF]/60 p-8 rounded-[12px] flex flex-col justify-between"
+              style={{
+                border: '1px solid #DBEAFE',
+              }}
+            >
+              <div>
+                <h3 className="font-source-serif-pro font-bold text-[#01286D] text-[24px] leading-[120%] tracking-[1%] mb-4">
+                  Energy & Process Industries
+                </h3>
+                <div className="w-full h-[2px] bg-[#FD550A] mb-6" />
+                <ul className="space-y-4">
+                  {[
+                    "Oil & Gas",
+                    "Petrochemical Plants",
+                    "Fertilizer & Chemical Industries",
+                    "Power Generation",
+                    "Energy Infrastructure"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 rounded-full bg-[#FD550A] flex-shrink-0" />
+                      <span className="font-montserrat font-normal text-[#4A4A4A] text-[15px] leading-[160%]">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 2: Manufacturing & Production */}
+            <div 
+              className="bg-[#EFF6FF]/60 p-8 rounded-[12px] flex flex-col justify-between"
+              style={{
+                border: '1px solid #DBEAFE',
+              }}
+            >
+              <div>
+                <h3 className="font-source-serif-pro font-bold text-[#01286D] text-[24px] leading-[120%] tracking-[1%] mb-4">
+                  Manufacturing & Production
+                </h3>
+                <div className="w-full h-[2px] bg-[#FD550A] mb-6" />
+                <ul className="space-y-4">
+                  {[
+                    "Manufacturing Industries",
+                    "Industrial Processing Facilities",
+                    "Food & Beverage Industry",
+                    "Pharmaceutical & Healthcare Industry"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 rounded-full bg-[#FD550A] flex-shrink-0" />
+                      <span className="font-montserrat font-normal text-[#4A4A4A] text-[15px] leading-[160%]">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 3: Infrastructure & Utilities */}
+            <div 
+              className="bg-[#EFF6FF]/60 p-8 rounded-[12px] flex flex-col justify-between"
+              style={{
+                border: '1px solid #DBEAFE',
+              }}
+            >
+              <div>
+                <h3 className="font-source-serif-pro font-bold text-[#01286D] text-[24px] leading-[120%] tracking-[1%] mb-4">
+                  Infrastructure & Utilities
+                </h3>
+                <div className="w-full h-[2px] bg-[#FD550A] mb-6" />
+                <ul className="space-y-4">
+                  {[
+                    "Cement & Construction Industry",
+                    "Water & Wastewater Facilities"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 rounded-full bg-[#FD550A] flex-shrink-0" />
+                      <span className="font-montserrat font-normal text-[#4A4A4A] text-[15px] leading-[160%]">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Sublime Family of Dolphin Header */}
+          <div className="mb-8">
+            <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-2 text-[#FD550A]">
+              Trusted Partner in Asset Integrity
+            </h3>
+            <h2 className="font-source-serif-pro font-bold text-[#01286D] text-[42px] leading-[110%] tracking-[2%] mb-3">
+              Sublime Family of Dolphin
+            </h2>
+            <div className="mb-4">
+              <Image src="/images/about/barline.png" alt="Divider" width={100} height={4} />
+            </div>
+            <p className="font-montserrat font-normal text-[#434343] text-[16.59px] leading-[175%] max-w-3xl">
+              A selection of organisations served across energy, process, manufacturing and infrastructure sectors.
+            </p>
+          </div>
+
+          {/* Client Logos / Pills Cloud */}
+          <div className="flex flex-wrap gap-3 items-center">
+            {[
+              "GE", "PSO", "Engro Energy", "Parco", "Hubco", "Nishat", "Attock", "Total", "Hyundai", "FFC", "BP", "TUV Rheinland", "Veloxi",
+              "Nestlé", "Engro Energy", "Shell", "Byco", "PDL", "Packages Group", "Coca-Cola", "Descon", "Rousch Pakistan", "Coats", "Style Textile",
+              "TUV Austria", "Nimir"
+            ].map((client, idx) => (
+              <div 
+                key={idx}
+                className="px-6 py-3 bg-white rounded-[8px] text-center shadow-sm flex items-center justify-center"
+                style={{
+                  border: '1px solid #E5E7EB',
+                }}
+              >
+                <span className="font-montserrat font-medium text-[#374151] text-[15px] tracking-[0.5px]">
+                  {client}
+                </span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
     </div>
