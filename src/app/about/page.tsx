@@ -592,24 +592,21 @@ export default function AboutPage() {
           </div>
 
           {/* Client Logos / Pills Cloud */}
-          <div className="flex flex-wrap gap-3 items-center">
+          <div className="flex flex-wrap justify-start gap-[10px] items-center">
             {[
               "GE", "PSO", "Engro Energy", "Parco", "Hubco", "Nishat", "Attock", "Total", "Hyundai", "FFC", "BP", "TUV Rheinland", "Veloxi",
               "Nestlé", "Engro Energy", "Shell", "Byco", "PDL", "Packages Group", "Coca-Cola", "Descon", "Rousch Pakistan", "Coats", "Style Textile",
               "TUV Austria", "Nimir"
             ].map((client, idx) => (
-              <div 
-                key={idx}
-                className="px-6 py-3 bg-white rounded-[8px] text-center shadow-sm flex items-center justify-center"
-                style={{
-                  border: '1px solid #E5E7EB',
-                }}
+              <span
+                key={`${client}-${idx}`}
+                className="bg-white border border-[#D1D5DB] text-[#434343] px-3.5 py-1.5 rounded-[4px] text-[12px] sm:text-[13px] font-medium hover:border-[#FD550A] hover:text-[#FD550A] transition-colors flex-grow text-center"
               >
-                <span className="font-montserrat font-medium text-[#374151] text-[15px] tracking-[0.5px]">
-                  {client}
-                </span>
-              </div>
+                {client}
+              </span>
             ))}
+            {/* Spacer to prevent the last line from stretching out of proportion */}
+            <div style={{ flexGrow: 100 }}></div>
           </div>
 
         </div>
