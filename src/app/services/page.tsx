@@ -8,11 +8,14 @@ export default function ServicesPage() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white bg-[#01286D]">
+      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white bg-[#01286D]">
         {/* Layer 1: Base Image (img.png) */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Services/img.png')` }}
+        <Image
+          src="/images/Services/img.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center z-0"
         />
 
         {/* Layer 2: Pattern Overlay (box.png) */}
@@ -30,7 +33,7 @@ export default function ServicesPage() {
         />
 
         {/* Content Container */}
-        <div className="relative z-30 max-w-2xl pl-2 md:pl-6 lg:pl-10">
+        <div className="relative z-30 max-w-2xl xl:ml-24">
           {/* Subheading */}
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[16px] leading-[140%] tracking-[2px] mb-2 uppercase">
             Service Domains

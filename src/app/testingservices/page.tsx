@@ -1,27 +1,30 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function TestingServicesPage() {
   return (
     <div className="w-full bg-white">
       {/* Section 1: Hero Banner */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white bg-[#01286D]">
+      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white bg-[#01286D]">
         {/* Background Image */}
+        <Image
+          src="/images/Testing Services/backimg.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center z-0"
+        />
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Testing Services/backimg.png')` }}
-        >
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(90deg, #01286D 0%, rgba(1, 40, 109, 0.85) 35%, rgba(1, 40, 109, 0.4) 100%)'
-            }}
-          />
-        </div>
+          className="absolute inset-0 z-10"
+          style={{
+            background: 'linear-gradient(90deg, #01286D 0%, rgba(1, 40, 109, 0.85) 35%, rgba(1, 40, 109, 0.4) 100%)'
+          }}
+        />
 
         {/* Content Container */}
-        <div className="relative z-20 max-w-2xl pl-2 md:pl-6 lg:pl-10">
+        <div className="relative z-20 max-w-2xl xl:ml-24">
           {/* Subheading */}
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[16px] leading-[140%] tracking-[2px] mb-2 uppercase">
             Service Domain 03
@@ -51,8 +54,9 @@ export default function TestingServicesPage() {
       </section>
 
       {/* Section 2: Why It Matters */}
-      <section className="w-full py-16 px-6 md:px-16 lg:px-24 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section className="w-full py-16 bg-white">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Text & Bullet Points */}
           <div className="lg:col-span-7 flex flex-col justify-start">
@@ -122,11 +126,12 @@ export default function TestingServicesPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Section 3: Services We Deliver with Exact #E9F3FF80 Background and #6666661A Grid Lines */}
       <section 
-        className="w-full py-16 px-6 md:px-16 lg:px-24 relative"
+        className="w-full py-16 relative"
         style={{
           backgroundColor: '#E9F3FF80',
           backgroundImage: `
@@ -136,7 +141,8 @@ export default function TestingServicesPage() {
           backgroundSize: 'calc(100% / 19) calc(100% / 8)'
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 relative z-10">
           
           {/* Section Header */}
           <div className="mb-12">
@@ -209,7 +215,7 @@ export default function TestingServicesPage() {
             </div>
 
           </div>
-
+        </div>
         </div>
       </section>
     </div>

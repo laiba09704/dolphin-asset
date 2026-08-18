@@ -5,27 +5,25 @@ export default function AboutPage() {
   return (
     <div className="w-full">
       {/* Section 1: Hero / About DAIS */}
-      <section className="relative w-full min-h-[600px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white">
+      <section className="relative w-full min-h-[600px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/about/background.png" 
-            alt="Industrial Background" 
-            fill 
-            style={{ objectFit: 'cover' }}
-            priority
-          />
-          {/* Custom Blue Gradient Overlay */}
-          <div 
-            className="absolute inset-0 z-10"
-            style={{
-              background: 'linear-gradient(90.47deg, #01286D 3.92%, rgba(1, 40, 109, 0.95) 12.22%, rgba(1, 40, 109, 0.9) 21.41%, rgba(1, 40, 109, 0.7) 36.71%)'
-            }}
-          />
-        </div>
+        <Image 
+          src="/images/about/background.png" 
+          alt="Industrial Background" 
+          fill 
+          priority
+          className="object-cover object-center z-0"
+        />
+        {/* Custom Blue Gradient Overlay */}
+        <div 
+          className="absolute inset-0 z-10"
+          style={{
+            background: 'linear-gradient(90.47deg, #01286D 3.92%, rgba(1, 40, 109, 0.95) 12.22%, rgba(1, 40, 109, 0.9) 21.41%, rgba(1, 40, 109, 0.7) 36.71%)'
+          }}
+        />
 
         {/* Content Container */}
-        <div className="relative z-20 max-w-2xl pl-2 md:pl-6 lg:pl-10">
+        <div className="relative z-20 max-w-2xl xl:ml-24">
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[16px] leading-[140%] tracking-[2px] mb-2 normal-case">
             About DAIS
           </h3>
