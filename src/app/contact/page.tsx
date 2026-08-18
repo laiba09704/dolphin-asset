@@ -58,8 +58,9 @@ export default function ContactPage() {
       </section>
 
       {/* Section 2: Reach DAIS & Request a Quote */}
-      <section className="w-full bg-white py-16 px-6 md:px-16 lg:px-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="w-full bg-white py-16">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Reach DAIS & Contact Info */}
           <div className="flex flex-col justify-start">
@@ -282,6 +283,7 @@ export default function ContactPage() {
             </form>
           </div>
 
+        </div>
         </div>
       </section>
     </div>

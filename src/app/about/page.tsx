@@ -30,7 +30,7 @@ export default function AboutPage() {
             About DAIS
           </h3>
           
-          <h1 className="font-source-serif-pro font-bold text-[52px] leading-[110%] tracking-[2%] mb-4">
+          <h1 className="font-source-serif-pro font-bold text-[36px] sm:text-[42px] md:text-[52px] leading-[110%] tracking-[2%] mb-4">
             Engineering Asset Integrity
           </h1>
           
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <Image src="/images/about/barline.png" alt="Divider" width={100} height={4} />
           </div>
           
-          <p className="font-montserrat font-medium text-[16.59px] leading-[163%] text-white/95">
+          <p className="font-montserrat font-medium text-[14px] md:text-[16px] lg:text-[16.59px] leading-[163%] text-white/95">
             Dolphin Asset Integrity Solutions (Private) Limited (DAIS) is a professional 
             engineering and asset integrity services company specializing in ensuring the 
             safety, integrity and reliability of industrial assets. We provide advanced 
@@ -51,8 +51,9 @@ export default function AboutPage() {
       </section>
 
       {/* Section 2: Who We Are (Ensuring Safety, Integrity & Reliability) */}
-      <section className="w-full bg-white py-20 px-8 md:px-16 lg:px-24 flex items-center justify-center">
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="w-full bg-white py-20">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content Area */}
           <div className="flex flex-col justify-center">
@@ -97,11 +98,13 @@ export default function AboutPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Section 3: Our Evolution (From DES To DAIS) */}
-      <section className="w-full bg-[#f8fafc] py-20 px-8 md:px-16 lg:px-24 flex items-center justify-center">
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="w-full bg-[#f8fafc] py-20">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Text & Checkpoints Area */}
           <div className="flex flex-col justify-center">
@@ -196,11 +199,13 @@ export default function AboutPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Section 4: Our Mission & Our Vision */}
-      <section className="w-full bg-white py-20 px-4 md:px-8 flex items-center justify-center">
-        <div className="w-[1300px] h-auto lg:h-[320px] bg-white border-[0.5px] border-[#d1d5db] rounded-[13px] flex flex-col lg:flex-row items-center overflow-hidden shadow-sm">
+      <section className="w-full bg-white py-20">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 h-auto lg:h-[320px] bg-white border-[0.5px] border-[#d1d5db] rounded-[13px] flex flex-col lg:flex-row items-center overflow-hidden shadow-sm">
           
           {/* Mission Card (Left Half) */}
           <div className="w-full lg:w-1/2 h-full bg-white p-8 md:p-10 relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r-[0.5px] border-[#d1d5db]">
@@ -261,11 +266,13 @@ export default function AboutPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Section 5: The Way We Engineer (Core Values) */}
-      <section className="w-full bg-white py-20 px-4 md:px-16 lg:px-24">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-white py-20">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           <div className="mb-12">
             <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-2 text-[#FD550A]">
               Core Values
@@ -348,11 +355,13 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Section 6: Leadership (Core Team) */}
-      <section className="w-full py-20 px-4 md:px-16 lg:px-24" style={{ backgroundColor: '#F4F7FB' }}>
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20" style={{ backgroundColor: '#F4F7FB' }}>
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           <div className="mb-14 pl-4 border-l-4 border-[#FD550A]">
             <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-1 text-[#FD550A]">
               Core Team
@@ -443,11 +452,13 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Section 7: Industries We Serve & Sublime Family of Dolphin */}
-      <section className="w-full bg-white py-20 px-4 md:px-16 lg:px-24">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-white py-20">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           <div className="mb-12">
             <h3 className="font-montserrat font-medium text-[16px] leading-[140%] tracking-[2px] mb-2 text-[#FD550A]">
               Industry Coverage
@@ -591,6 +602,7 @@ export default function AboutPage() {
             <div style={{ flexGrow: 100 }}></div>
           </div>
 
+        </div>
         </div>
       </section>
     </div>

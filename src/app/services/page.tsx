@@ -37,7 +37,7 @@ export default function ServicesPage() {
           </h3>
           
           {/* Main Heading */}
-          <h1 className="font-source-serif-pro font-bold text-[44px] md:text-[56px] leading-[110%] tracking-[2%] mb-3 text-white">
+          <h1 className="font-source-serif-pro font-bold text-[36px] sm:text-[40px] md:text-[56px] leading-[110%] tracking-[2%] mb-3 text-white">
             Our Services
           </h1>
           
@@ -53,7 +53,7 @@ export default function ServicesPage() {
           />
           
           {/* Description Text */}
-          <p className="font-montserrat font-normal text-[16px] md:text-[18px] leading-[160%] text-white/95 max-w-xl">
+          <p className="font-montserrat font-normal text-[14px] md:text-[16px] lg:text-[18px] leading-[160%] text-white/95 max-w-xl">
             Advanced inspection, integrity assessment, calibration, testing and training solutions delivered through structured engineering practices and international standards.
           </p>
         </div>

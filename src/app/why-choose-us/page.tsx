@@ -96,8 +96,9 @@ export default function WhyChooseUsPage() {
       </section>
 
       {/* Six Reasons Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20 bg-white relative">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           
           <div className="mb-12">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -155,11 +156,13 @@ export default function WhyChooseUsPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Trusted Engineering Support Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 text-white relative overflow-hidden" style={{ backgroundColor: '#0F2D5D' }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="w-full py-20 text-white relative overflow-hidden" style={{ backgroundColor: '#0F2D5D' }}>
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-7">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -205,11 +208,13 @@ export default function WhyChooseUsPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Let's Assess Your Assets Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20 bg-white relative">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
             Work With Us
           </span>
@@ -236,6 +241,7 @@ export default function WhyChooseUsPage() {
               Contact Us
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </div>
