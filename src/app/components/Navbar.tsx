@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="relative">
@@ -77,30 +80,30 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div className="hidden xl:flex items-center gap-8 -ml-24 text-[12px] font-medium text-[#434343]">
-          <a href="/" className="text-[#FD550A] font-semibold">
+          <Link href="/" className={pathname === "/" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
             HOME
-          </a>
+          </Link>
 
-          <a href="/services" className="hover:text-[#FD550A]">
+          <Link href="/services" className={pathname === "/services" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
             SERVICES
-          </a>
+          </Link>
 
-          <a href="/about" className="hover:text-[#FD550A] ">
+          <Link href="/about" className={pathname === "/about" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
             ABOUT
-          </a>
+          </Link>
 
-          <a href="/why-choose-us" className="hover:text-[#FD550A] ">
+          <Link href="/why-choose-us" className={pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
             WHY CHOOSE US
-          </a>
+          </Link>
 
-          <a href="/contact" className="hover:text-[#FD550A] ">
+          <Link href="/contact" className={pathname === "/contact" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
             CONTACT US
-          </a>
+          </Link>
         </div>
 
         {/* Request a Quote Button */}
         <div className="hidden xl:block mr-24">
-          <a
+          <Link
             href="/quote"
             className="flex items-center gap-2  bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition"
           >
@@ -113,7 +116,7 @@ export default function Navbar() {
               unoptimized
               quality={100}
             />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Menu Button */}
@@ -136,21 +139,21 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-4 space-y-4 z-50">
-          <a href="/" className="text-[#FD550A] font-semibold">
+          <Link href="/" className={pathname === "/" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
             HOME
-          </a>
-          <a href="/services" className="text-[#434343] hover:text-[#FD550A]">
+          </Link>
+          <Link href="/services" className={pathname === "/services" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
             SERVICES
-          </a>
-          <a href="/about" className="text-[#434343] hover:text-[#FD550A]">
+          </Link>
+          <Link href="/about" className={pathname === "/about" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
             ABOUT
-          </a>
-          <a href="/why-choose-us" className="text-[#434343] hover:text-[#FD550A]">
+          </Link>
+          <Link href="/why-choose-us" className={pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
             WHY CHOOSE US
-          </a>
-          <a href="/contact" className="text-[#434343] hover:text-[#FD550A]">
+          </Link>
+          <Link href="/contact" className={pathname === "/contact" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
             CONTACT US
-          </a>
+          </Link>
           
           <div className="pt-4 border-t border-gray-200">
             <div className="flex flex-col gap-3">
@@ -167,7 +170,7 @@ export default function Navbar() {
           </div>
 
           <div className="pt-2">
-             <a
+             <Link
               href="/quote"
               className="flex items-center justify-center gap-2 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition w-full"
             >
@@ -180,7 +183,7 @@ export default function Navbar() {
                 unoptimized
                 quality={100}
               />
-            </a>
+            </Link>
           </div>
         </div>
       )}

@@ -17,7 +17,7 @@ export default function ServicesPage() {
 
         {/* Layer 2: Pattern Overlay (box.png) */}
         <div 
-          className="absolute inset-0 z-10 bg-repeat bg-auto opacity-40"
+          className="absolute inset-0 z-10 bg-repeat bg-auto opacity-20"
           style={{ backgroundImage: `url('/images/Services/box.png')` }}
         />
 
@@ -90,8 +90,9 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Card 1: Inspection & Integrity Assessment */}
-            <div 
-              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between"
+            <Link 
+              href="/assesement"
+              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between group cursor-pointer block hover:shadow-xl transition-shadow"
               style={{
                 border: '1px solid #4343434D',
                 boxShadow: '1px 3px 7.5px rgba(1, 40, 109, 0.15)'
@@ -137,19 +138,17 @@ export default function ServicesPage() {
 
               {/* Action Link */}
               <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
-                <Link 
-                  href="/services/inspection" 
-                  className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] hover:text-[#e04a05] transition-colors"
-                >
+                <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
                   Explore Inspection 
                   <span className="text-[16px]">&rarr;</span>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2: Calibration Services */}
-            <div 
-              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between"
+            <Link 
+              href="/callibrationservices"
+              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between group cursor-pointer block hover:shadow-xl transition-shadow"
               style={{
                 border: '1px solid #4343434D',
                 boxShadow: '1px 3px 7.5px rgba(1, 40, 109, 0.15)'
@@ -195,19 +194,17 @@ export default function ServicesPage() {
 
               {/* Action Link */}
               <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
-                <Link 
-                  href="/services/calibration" 
-                  className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] hover:text-[#e04a05] transition-colors"
-                >
+                <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
                   Explore Calibration 
                   <span className="text-[16px]">&rarr;</span>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3: Testing Services */}
-            <div 
-              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between"
+            <Link 
+              href="/testingservices"
+              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between group cursor-pointer block hover:shadow-xl transition-shadow"
               style={{
                 border: '1px solid #4343434D',
                 boxShadow: '1px 3px 7.5px rgba(1, 40, 109, 0.15)'
@@ -253,19 +250,17 @@ export default function ServicesPage() {
 
               {/* Action Link */}
               <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
-                <Link 
-                  href="/services/testing" 
-                  className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] hover:text-[#e04a05] transition-colors"
-                >
+                <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
                   Explore Testing 
                   <span className="text-[16px]">&rarr;</span>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Card 4: Training Services */}
-            <div 
-              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between"
+            <Link 
+              href="/trainingservices"
+              className="bg-white rounded-[10px] overflow-hidden flex flex-col justify-between group cursor-pointer block hover:shadow-xl transition-shadow"
               style={{
                 border: '1px solid #4343434D',
                 boxShadow: '1px 3px 7.5px rgba(1, 40, 109, 0.15)'
@@ -311,15 +306,12 @@ export default function ServicesPage() {
 
               {/* Action Link */}
               <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
-                <Link 
-                  href="/services/training" 
-                  className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] hover:text-[#e04a05] transition-colors"
-                >
+                <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
                   Explore Training 
                   <span className="text-[16px]">&rarr;</span>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
 
           </div>
 
