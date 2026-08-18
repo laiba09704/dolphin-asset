@@ -60,8 +60,11 @@ export default function ServicesPage() {
       </section>
 
       {/* Choose A Service Domain Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20 bg-white relative">
+        {/* Wrapping container matching Navbar padding */}
+        <div className="w-full px-6 xl:px-10">
+          {/* Inner content matching Navbar left/right margins */}
+          <div className="xl:ml-24 xl:mr-24">
           
           {/* Section Header */}
           <div className="mb-14">
@@ -315,6 +318,7 @@ export default function ServicesPage() {
 
           </div>
 
+        </div>
         </div>
       </section>
     </div>
