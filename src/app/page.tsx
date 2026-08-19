@@ -437,7 +437,7 @@ export default function Home() {
             ].map((industry) => (
               <div
                 key={industry.title}
-               className="bg-[#F4F7FC] rounded-xl p-6 flex flex-col h-full min-h-[250px] border border-[#43434326]"
+               className="bg-[#E9F3FF] rounded-xl p-6 flex flex-col h-full min-h-[250px] border border-[#43434326]"
               >
                 <h3
                   className={`text-[#01286D] font-bold text-lg mb-2 ${sourceSerif.className}`}
