@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function WhyChooseUsPage() {
   const reasonsList = [
@@ -54,10 +55,13 @@ export default function WhyChooseUsPage() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
-      <section className="relative w-full min-h-[450px] md:min-h-[500px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white bg-[#01286D]">
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/whychooseus/main.png')` }}
+      <section className="relative w-full min-h-[450px] md:min-h-[500px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white bg-[#01286D]">
+        <Image
+          src="/images/whychooseus/main.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center z-0"
         />
         <div 
           className="absolute inset-0 z-10 bg-repeat bg-auto opacity-40"
@@ -70,7 +74,7 @@ export default function WhyChooseUsPage() {
           }}
         />
 
-        <div className="relative z-30 max-w-3xl pl-0 md:pl-4">
+        <div className="relative z-30 max-w-3xl xl:ml-24">
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[15px] leading-[140%] tracking-[2px] mb-2 uppercase">
             Our Advantage
           </h3>
@@ -96,8 +100,9 @@ export default function WhyChooseUsPage() {
       </section>
 
       {/* Six Reasons Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20 bg-white relative">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           
           <div className="mb-12">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -155,11 +160,13 @@ export default function WhyChooseUsPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Trusted Engineering Support Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 text-white relative overflow-hidden" style={{ backgroundColor: '#0F2D5D' }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="w-full py-20 text-white relative overflow-hidden" style={{ backgroundColor: '#0F2D5D' }}>
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-7">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -205,11 +212,13 @@ export default function WhyChooseUsPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Let's Assess Your Assets Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-20 bg-white relative">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24">
           <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
             Work With Us
           </span>
@@ -236,6 +245,7 @@ export default function WhyChooseUsPage() {
               Contact Us
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </div>

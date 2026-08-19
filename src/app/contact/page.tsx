@@ -1,16 +1,20 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
     <div className="w-full">
       {/* Section 1: Talk To Our Engineers */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white bg-[#01286D]">
+      <section className="relative w-full min-h-[500px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white bg-[#01286D]">
         {/* Layer 1: Base Image (/images/contact/img.png) */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/contact/img.png')` }}
+        <Image
+          src="/images/contact/img.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center z-0"
         />
 
         {/* Layer 2: Pattern Overlay (box.png) */}
@@ -28,7 +32,7 @@ export default function ContactPage() {
         />
 
         {/* Content Container */}
-        <div className="relative z-30 max-w-2xl pl-2 md:pl-6 lg:pl-10">
+        <div className="relative z-30 max-w-2xl xl:ml-24">
           {/* Subheading */}
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[16px] leading-[140%] tracking-[2px] mb-2 uppercase">
             Contact Us
@@ -58,8 +62,9 @@ export default function ContactPage() {
       </section>
 
       {/* Section 2: Reach DAIS & Request a Quote */}
-      <section className="w-full bg-white py-16 px-6 md:px-16 lg:px-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="w-full bg-white py-16">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Reach DAIS & Contact Info */}
           <div className="flex flex-col justify-start">
@@ -282,6 +287,7 @@ export default function ContactPage() {
             </form>
           </div>
 
+        </div>
         </div>
       </section>
     </div>

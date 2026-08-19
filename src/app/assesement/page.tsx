@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export default function InspectionDetailPage() {
   const servicesList = [
@@ -19,11 +20,14 @@ export default function InspectionDetailPage() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section (Merged backimg.png + box.png + gradient overlay) */}
-      <section className="relative w-full min-h-[450px] md:min-h-[500px] flex items-center justify-start py-20 px-8 md:px-16 lg:px-24 overflow-hidden text-white bg-[#01286D]">
+      <section className="relative w-full min-h-[450px] md:min-h-[500px] flex items-center justify-start py-20 px-6 xl:px-10 overflow-hidden text-white bg-[#01286D]">
         {/* Layer 1: Base Image (backimg.png) */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/assesement/backimg.png')` }}
+        <Image
+          src="/images/assesement/backimg.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center z-0"
         />
 
         {/* Layer 2: Pattern Overlay (box.png) */}
@@ -41,7 +45,7 @@ export default function InspectionDetailPage() {
         />
 
         {/* Content Container */}
-        <div className="relative z-30 max-w-3xl pl-0 md:pl-4">
+        <div className="relative z-30 max-w-3xl xl:ml-24">
           <h3 className="text-[#FD550A] font-montserrat font-semibold text-[15px] leading-[140%] tracking-[2px] mb-2 uppercase">
             Service Domain 01
           </h3>
@@ -67,8 +71,9 @@ export default function InspectionDetailPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-white relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="w-full py-20 bg-white relative">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-7">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -122,10 +127,11 @@ export default function InspectionDetailPage() {
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* Services We Deliver Section */}
-      <section className="w-full py-20 px-6 md:px-16 lg:px-24 bg-[#F8FAFC] relative overflow-hidden"
+      <section className="w-full py-20 bg-[#F8FAFC] relative overflow-hidden"
         style={{
           backgroundImage: `url('/images/assesment/box.png')`,
           backgroundRepeat: 'repeat',
@@ -133,7 +139,8 @@ export default function InspectionDetailPage() {
           backgroundColor: '#F9FAFB'
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full px-6 xl:px-10">
+          <div className="xl:ml-24 xl:mr-24 relative z-10">
           
           <div className="mb-12">
             <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
@@ -173,6 +180,7 @@ export default function InspectionDetailPage() {
             ))}
           </div>
 
+        </div>
         </div>
       </section>
     </div>
