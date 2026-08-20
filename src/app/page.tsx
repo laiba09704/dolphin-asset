@@ -603,7 +603,7 @@ export default function Home() {
 
       {/* Sublime Family of Dolphin Section */}
       <section
-             className={`w-full bg-white py-16 pt-2 flex items-center ${montserrat.className}`}
+             className={`w-full bg-white py-16  flex items-center ${montserrat.className}`}
            >
              <div className="w-full px-6 xl:px-10 xl:mx-24">
                <AnimatedSection direction="up">
