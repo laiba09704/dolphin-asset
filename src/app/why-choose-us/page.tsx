@@ -3,6 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import AnimatedSection from '../components/AnimatedSection';
+import StaggerContainer, { staggerItemVariants } from '../components/StaggerContainer';
+import { motion } from 'framer-motion';
 
 export default function WhyChooseUsPage() {
   const reasonsList = [
@@ -75,27 +78,35 @@ export default function WhyChooseUsPage() {
         />
 
         <div className="relative z-30 max-w-3xl xl:ml-24">
-          <h3 className="text-[#FD550A] font-montserrat font-semibold text-[15px] leading-[140%] tracking-[2px] mb-2 uppercase">
-            Our Advantage
-          </h3>
+          <AnimatedSection direction="left" delay={0.1}>
+            <h3 className="text-[#FD550A] font-montserrat font-semibold text-[15px] leading-[140%] tracking-[2px] mb-2 uppercase">
+              Our Advantage
+            </h3>
+          </AnimatedSection>
           
-          <h1 className="font-source-serif-pro font-bold text-[40px] md:text-[52px] leading-[115%] tracking-[1%] mb-3 text-white">
-            Why Choose DAIS
-          </h1>
+          <AnimatedSection direction="left" delay={0.3}>
+            <h1 className="font-source-serif-pro font-bold text-[40px] md:text-[52px] leading-[115%] tracking-[1%] mb-3 text-white">
+              Why Choose DAIS
+            </h1>
+          </AnimatedSection>
           
-          <div 
-            className="mb-5"
-            style={{
-              width: '71px',
-              height: '3px',
-              backgroundColor: '#FD550A',
-              opacity: 1
-            }}
-          />
+          <AnimatedSection direction="left" delay={0.5}>
+            <div 
+              className="mb-5"
+              style={{
+                width: '71px',
+                height: '3px',
+                backgroundColor: '#FD550A',
+                opacity: 1
+              }}
+            />
+          </AnimatedSection>
           
-          <p className="font-montserrat font-normal text-[15px] md:text-[17px] leading-[170%] text-white/90 max-w-2xl">
-            DAIS combines technical expertise, structured engineering practices, and a strong commitment to safety and quality to deliver dependable asset integrity solutions.
-          </p>
+          <AnimatedSection direction="up" delay={0.6}>
+            <p className="font-montserrat font-normal text-[15px] md:text-[17px] leading-[170%] text-white/90 max-w-2xl">
+              DAIS combines technical expertise, structured engineering practices, and a strong commitment to safety and quality to deliver dependable asset integrity solutions.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -104,32 +115,35 @@ export default function WhyChooseUsPage() {
         <div className="w-full px-6 xl:px-10">
           <div className="xl:ml-24 xl:mr-24">
           
-          <div className="mb-12">
-            <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
-              Six Reasons
-            </span>
-            <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-3">
-              Dependable By Design
-            </h2>
-            <div 
-              className="mb-4"
-              style={{
-                width: '71px',
-                height: '3px',
-                backgroundColor: '#FD550A',
-                opacity: 1
-              }}
-            />
-            <p className="font-montserrat font-normal text-[#4A5568] text-[14px] md:text-[15px] max-w-2xl">
-              Our services are adapted to client requirements, operating environments, equipment conditions, and applicable technical standards.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reasonsList.map((reason, index) => (
+          <AnimatedSection direction="up">
+            <div className="mb-12">
+              <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
+                Six Reasons
+              </span>
+              <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-3">
+                Dependable By Design
+              </h2>
               <div 
+                className="mb-4"
+                style={{
+                  width: '71px',
+                  height: '3px',
+                  backgroundColor: '#FD550A',
+                  opacity: 1
+                }}
+              />
+              <p className="font-montserrat font-normal text-[#4A5568] text-[14px] md:text-[15px] max-w-2xl">
+                Our services are adapted to client requirements, operating environments, equipment conditions, and applicable technical standards.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reasonsList.map((reason, index) => (
+              <motion.div 
                 key={index}
-                className="bg-white rounded-[12px] p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative"
+                variants={staggerItemVariants}
+                className="card-hover bg-white rounded-[12px] p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative"
                 style={{
                   border: '1px solid #E2E8F0',
                   boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.03)'
@@ -155,9 +169,9 @@ export default function WhyChooseUsPage() {
                     {reason.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </StaggerContainer>
 
         </div>
         </div>
@@ -168,48 +182,53 @@ export default function WhyChooseUsPage() {
         <div className="w-full px-6 xl:px-10">
           <div className="xl:ml-24 xl:mr-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div className="lg:col-span-7">
-            <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
-              Our Pillars
-            </span>
-            <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-white mb-3">
-              Trusted engineering support for safer operations
-            </h2>
-            <div 
-              className="mb-8"
-              style={{
-                width: '71px',
-                height: '3px',
-                backgroundColor: '#FD550A',
-                opacity: 1
-              }}
-            />
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {pillarsList.map((pillar, index) => (
-                <div 
-                  key={index}
-                  className="px-5 py-3.5 rounded-[6px] border border-white/20 bg-white/5 font-montserrat font-medium text-[15px] text-white"
-                >
-                  {pillar}
-                </div>
-              ))}
-            </div>
-
-            <p className="font-montserrat font-normal text-white/80 text-[14px] md:text-[15px]">
-              Trusted engineering support for safer operations and more reliable industrial assets.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-[520px] h-[340px] md:h-[380px] rounded-[12px] overflow-hidden shadow-2xl border border-white/10">
-              <img 
-                src="/images/whychooseus/machine.png" 
-                alt="Machine equipment" 
-                className="w-full h-full object-cover"
+          <AnimatedSection direction="left" delay={0.2} className="lg:col-span-7">
+            <div>
+              <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
+                Our Pillars
+              </span>
+              <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-white mb-3">
+                Trusted engineering support for safer operations
+              </h2>
+              <div 
+                className="mb-8"
+                style={{
+                  width: '71px',
+                  height: '3px',
+                  backgroundColor: '#FD550A',
+                  opacity: 1
+                }}
               />
+
+              <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {pillarsList.map((pillar, index) => (
+                  <motion.div 
+                    key={index}
+                    variants={staggerItemVariants}
+                    className="px-5 py-3.5 rounded-[6px] border border-white/20 bg-white/5 font-montserrat font-medium text-[15px] text-white"
+                  >
+                    {pillar}
+                  </motion.div>
+                ))}
+              </StaggerContainer>
+
+              <p className="font-montserrat font-normal text-white/80 text-[14px] md:text-[15px]">
+                Trusted engineering support for safer operations and more reliable industrial assets.
+              </p>
             </div>
-          </div>
+          </AnimatedSection>
+
+          <AnimatedSection direction="right" delay={0.4} className="lg:col-span-5">
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-[520px] h-[340px] md:h-[380px] rounded-[12px] overflow-hidden shadow-2xl border border-white/10">
+                <img 
+                  src="/images/whychooseus/machine.png" 
+                  alt="Machine equipment" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
 
         </div>
         </div>
@@ -219,32 +238,34 @@ export default function WhyChooseUsPage() {
       <section className="w-full py-20 bg-white relative">
         <div className="w-full px-6 xl:px-10">
           <div className="xl:ml-24 xl:mr-24">
-          <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
-            Work With Us
-          </span>
-          <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-3">
-            Let's Assess Your Assets
-          </h2>
-          <div 
-            className="mb-4"
-            style={{
-              width: '71px',
-              height: '3px',
-              backgroundColor: '#FD550A',
-              opacity: 1
-            }}
-          />
-          <p className="font-montserrat font-normal text-[#4A5568] text-[15px] mb-8 max-w-xl">
-            Tell us about your equipment, operating conditions and compliance requirements.
-          </p>
-          <div>
-            <Link 
-              href="/contact"
-              className="inline-block bg-[#FD550A] hover:bg-[#e04805] text-white font-montserrat font-semibold text-[15px] px-8 py-3.5 rounded-[6px] transition-all duration-300 shadow-md"
-            >
-              Contact Us
-            </Link>
-          </div>
+          <AnimatedSection direction="up">
+            <span className="text-[#FD550A] font-montserrat font-semibold text-[13px] leading-[140%] tracking-[2px] uppercase mb-1.5 block">
+              Work With Us
+            </span>
+            <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-3">
+              Let&apos;s Assess Your Assets
+            </h2>
+            <div 
+              className="mb-4"
+              style={{
+                width: '71px',
+                height: '3px',
+                backgroundColor: '#FD550A',
+                opacity: 1
+              }}
+            />
+            <p className="font-montserrat font-normal text-[#4A5568] text-[15px] mb-8 max-w-xl">
+              Tell us about your equipment, operating conditions and compliance requirements.
+            </p>
+            <div>
+              <Link 
+                href="/contact"
+                className="inline-block bg-[#FD550A] hover:bg-[#e04805] text-white font-montserrat font-semibold text-[15px] px-8 py-3.5 rounded-[6px] transition-all duration-300 shadow-md"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
         </div>
       </section>

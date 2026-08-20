@@ -3,14 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="relative">
+    <div className="sticky top-0 z-50">
       {/* Top Contact Bar */}
       <div className="hidden xl:flex w-full bg-[#01286D] justify-between items-center px-10 py-2">
         <div className="flex items-center ml-24">
@@ -64,7 +74,11 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full bg-white flex justify-between items-center px-6 xl:px-10 py-3 shadow-sm">
+      <div
+        className={`w-full bg-white flex justify-between items-center px-6 xl:px-10 py-3 transition-all duration-300 ${
+          scrolled ? "shadow-lg bg-white/95 backdrop-blur-sm" : "shadow-sm"
+        }`}
+      >
         {/* Logo */}
         <div className="flex items-center xl:ml-24">
           <Image
@@ -80,24 +94,29 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div className="hidden xl:flex items-center gap-8 -ml-24 text-[12px] font-medium text-[#434343]">
-          <Link href="/" className={pathname === "/" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
+          <Link href="/" className={`relative group ${pathname === "/" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"} transition-colors duration-200`}>
             HOME
+            <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#FD550A] transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`} />
           </Link>
 
-          <Link href="/services" className={pathname === "/services" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
+          <Link href="/services" className={`relative group ${pathname === "/services" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"} transition-colors duration-200`}>
             SERVICES
+            <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#FD550A] transition-all duration-300 ${pathname === "/services" ? "w-full" : "w-0 group-hover:w-full"}`} />
           </Link>
 
-          <Link href="/about" className={pathname === "/about" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
+          <Link href="/about" className={`relative group ${pathname === "/about" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"} transition-colors duration-200`}>
             ABOUT
+            <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#FD550A] transition-all duration-300 ${pathname === "/about" ? "w-full" : "w-0 group-hover:w-full"}`} />
           </Link>
 
-          <Link href="/why-choose-us" className={pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
+          <Link href="/why-choose-us" className={`relative group ${pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"} transition-colors duration-200`}>
             WHY CHOOSE US
+            <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#FD550A] transition-all duration-300 ${pathname === "/why-choose-us" ? "w-full" : "w-0 group-hover:w-full"}`} />
           </Link>
 
-          <Link href="/contact" className={pathname === "/contact" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"}>
+          <Link href="/contact" className={`relative group ${pathname === "/contact" ? "text-[#FD550A] font-semibold" : "hover:text-[#FD550A]"} transition-colors duration-200`}>
             CONTACT US
+            <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#FD550A] transition-all duration-300 ${pathname === "/contact" ? "w-full" : "w-0 group-hover:w-full"}`} />
           </Link>
         </div>
 
@@ -105,7 +124,7 @@ export default function Navbar() {
         <div className="hidden xl:block mr-24">
           <Link
             href="/quote"
-            className="flex items-center gap-2  bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition"
+            className="flex items-center gap-2 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition animate-pulse-glow"
           >
             REQUEST A QUOTE
             <Image
@@ -136,57 +155,65 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-4 space-y-4 z-50">
-          <Link href="/" className={pathname === "/" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
-            HOME
-          </Link>
-          <Link href="/services" className={pathname === "/services" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
-            SERVICES
-          </Link>
-          <Link href="/about" className={pathname === "/about" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
-            ABOUT
-          </Link>
-          <Link href="/why-choose-us" className={pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
-            WHY CHOOSE US
-          </Link>
-          <Link href="/contact" className={pathname === "/contact" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
-            CONTACT US
-          </Link>
-          
-          <div className="pt-4 border-t border-gray-200">
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2 text-[12px] text-[#434343]">
-                <span className="font-semibold text-[#01286D]">WhatsApp:</span> WHATSAPP
-              </div>
-              <div className="flex items-center gap-2 text-[12px] text-[#434343]">
-                <span className="font-semibold text-[#01286D]">Phone:</span> +92 300 6624494
-              </div>
-              <div className="flex items-center gap-2 text-[12px] text-[#434343]">
-                <span className="font-semibold text-[#01286D]">Email:</span> info@dolphinais.com
+      {/* Mobile Menu Dropdown — Animated */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-4 space-y-4 z-50 overflow-hidden"
+          >
+            <Link href="/" className={pathname === "/" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
+              HOME
+            </Link>
+            <Link href="/services" className={pathname === "/services" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
+              SERVICES
+            </Link>
+            <Link href="/about" className={pathname === "/about" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
+              ABOUT
+            </Link>
+            <Link href="/why-choose-us" className={pathname === "/why-choose-us" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
+              WHY CHOOSE US
+            </Link>
+            <Link href="/contact" className={pathname === "/contact" ? "text-[#FD550A] font-semibold" : "text-[#434343] hover:text-[#FD550A]"}>
+              CONTACT US
+            </Link>
+            
+            <div className="pt-4 border-t border-gray-200">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-2 text-[12px] text-[#434343]">
+                  <span className="font-semibold text-[#01286D]">WhatsApp:</span> WHATSAPP
+                </div>
+                <div className="flex items-center gap-2 text-[12px] text-[#434343]">
+                  <span className="font-semibold text-[#01286D]">Phone:</span> +92 300 6624494
+                </div>
+                <div className="flex items-center gap-2 text-[12px] text-[#434343]">
+                  <span className="font-semibold text-[#01286D]">Email:</span> info@dolphinais.com
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="pt-2">
-             <Link
-              href="/quote"
-              className="flex items-center justify-center gap-2 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition w-full"
-            >
-              REQUEST A QUOTE
-              <Image
-                src="/images/navbar/arrow.png"
-                alt="Arrow"
-                width={6}
-                height={6}
-                unoptimized
-                quality={100}
-              />
-            </Link>
-          </div>
-        </div>
-      )}
+            <div className="pt-2">
+               <Link
+                href="/quote"
+                className="flex items-center justify-center gap-2 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition w-full animate-pulse-glow"
+              >
+                REQUEST A QUOTE
+                <Image
+                  src="/images/navbar/arrow.png"
+                  alt="Arrow"
+                  width={6}
+                  height={6}
+                  unoptimized
+                  quality={100}
+                />
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

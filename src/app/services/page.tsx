@@ -3,6 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedSection from "../components/AnimatedSection";
+import StaggerContainer, { staggerItemVariants } from "../components/StaggerContainer";
+import TiltCard from "../components/TiltCard";
+import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   return (
@@ -36,32 +40,40 @@ export default function ServicesPage() {
         {/* Content Container */}
         <div className="relative z-30 max-w-2xl xl:ml-24">
           {/* Subheading */}
-          <h3 className="text-[#FD550A] font-montserrat font-semibold text-[12px] leading-[140%] tracking-[2px] mb-2">
-            Service Domains
-          </h3>
+          <AnimatedSection direction="left" delay={0.1}>
+            <h3 className="text-[#FD550A] font-montserrat font-semibold text-[12px] leading-[140%] tracking-[2px] mb-2">
+              Service Domains
+            </h3>
+          </AnimatedSection>
 
           {/* Main Heading */}
-          <h1 className="font-source-serif-pro font-bold text-[30px] sm:text-[34px] md:text-[44px] leading-[110%] tracking-[2%] mb-3 text-white">
-            Our Services
-          </h1>
+          <AnimatedSection direction="left" delay={0.3}>
+            <h1 className="font-source-serif-pro font-bold text-[30px] sm:text-[34px] md:text-[44px] leading-[110%] tracking-[2%] mb-3 text-white">
+              Our Services
+            </h1>
+          </AnimatedSection>
 
           {/* Orange Line */}
-          <div
-            className="mb-4"
-            style={{
-              width: "71px",
-              height: "3px",
-              backgroundColor: "#FD550A",
-              opacity: 1,
-            }}
-          />
+          <AnimatedSection direction="left" delay={0.5}>
+            <div
+              className="mb-4"
+              style={{
+                width: "71px",
+                height: "3px",
+                backgroundColor: "#FD550A",
+                opacity: 1,
+              }}
+            />
+          </AnimatedSection>
 
           {/* Description Text */}
-          <p className="font-montserrat font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-[160%] text-white/95 max-w-lg mt-6">
-            Advanced inspection, integrity assessment, calibration, testing and
-            training solutions delivered through structured engineering
-            practices and international standards.
-          </p>
+          <AnimatedSection direction="up" delay={0.6}>
+            <p className="font-montserrat font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-[160%] text-white/95 max-w-lg mt-6">
+              Advanced inspection, integrity assessment, calibration, testing and
+              training solutions delivered through structured engineering
+              practices and international standards.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -72,41 +84,45 @@ export default function ServicesPage() {
           {/* Inner content matching Navbar left/right margins */}
           <div className="xl:ml-24 xl:mr-24">
             {/* Section Header */}
-            <div className="mb-2">
-              <span className="text-[#FD550A] font-montserrat font-semibold text-[11px] leading-[140%] tracking-[2px] mb-1.5 block">
-                Four Domains
-              </span>
-              <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-2.5">
-                Choose A Service Domain
-              </h2>
-              {/* Orange Line */}
-              <div
-                className="mb-4"
-                style={{
-                  width: "71px",
-                  height: "3px",
-                  backgroundColor: "#FD550A",
-                  opacity: 1,
-                }}
-              />
-              <p className="font-montserrat font-normal text-[#4A5568] text-[13px] md:text-[14px] max-w-2xl leading-[160%]">
-                Each domain has its own dedicated page covering scope,
-                methodology and the specific services we deliver.
-              </p>
-            </div>
+            <AnimatedSection direction="up">
+              <div className="mb-2">
+                <span className="text-[#FD550A] font-montserrat font-semibold text-[11px] leading-[140%] tracking-[2px] mb-1.5 block">
+                  Four Domains
+                </span>
+                <h2 className="font-source-serif-pro font-bold text-[34px] md:text-[40px] text-[#01286D] mb-2.5">
+                  Choose A Service Domain
+                </h2>
+                {/* Orange Line */}
+                <div
+                  className="mb-4"
+                  style={{
+                    width: "71px",
+                    height: "3px",
+                    backgroundColor: "#FD550A",
+                    opacity: 1,
+                  }}
+                />
+                <p className="font-montserrat font-normal text-[#4A5568] text-[13px] md:text-[14px] max-w-2xl leading-[160%]">
+                  Each domain has its own dedicated page covering scope,
+                  methodology and the specific services we deliver.
+                </p>
+              </div>
+            </AnimatedSection>
 
       {/* Cards Grid (2x2) */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-16">
+<StaggerContainer staggerDelay={0.15}>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-16">
   {/* Card 1: Inspection & Integrity Assessment */}
+  <motion.div variants={staggerItemVariants} className="h-full">
   <Link
     href="/assesement"
-    className="bg-white rounded-[10px] overflow-hidden flex flex-col group cursor-pointer block hover:shadow-xl transition-shadow"
+    className="bg-white rounded-[10px] overflow-hidden flex flex-col h-full group cursor-pointer block hover:shadow-xl transition-shadow"
     style={{
       border: "1px solid #4343434D",
       boxShadow: "1px 3px 7.5px rgba(1, 40, 109, 0.15)",
     }}
   >
-    <div>
+    <div className="flex-grow">
       {/* Image Container with Badge */}
       <div className="relative w-full h-[140px] md:h-[160px] overflow-hidden rounded-t-[10px]">
         <Image
@@ -140,7 +156,7 @@ export default function ServicesPage() {
           Inspection & Integrity Assessment
         </h3>
 
-        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2 h-[36px]">
+        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2">
           Systematic evaluation of industrial equipment, structures,
           and mechanical systems to determine their present
           condition and fitness for continued operation.
@@ -149,24 +165,26 @@ export default function ServicesPage() {
     </div>
 
     {/* Action Link */}
-    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0">
+    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
       <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
         Explore Inspection
         <span className="text-[16px]">&rarr;</span>
       </span>
     </div>
   </Link>
+  </motion.div>
 
   {/* Card 2: Calibration Services */}
+  <motion.div variants={staggerItemVariants} className="h-full">
   <Link
     href="/callibrationservices"
-    className="bg-white rounded-[10px] overflow-hidden flex flex-col group cursor-pointer block hover:shadow-xl transition-shadow"
+    className="bg-white rounded-[10px] overflow-hidden flex flex-col h-full group cursor-pointer block hover:shadow-xl transition-shadow"
     style={{
       border: "1px solid #4343434D",
       boxShadow: "1px 3px 7.5px rgba(1, 40, 109, 0.15)",
     }}
   >
-    <div>
+    <div className="flex-grow">
       {/* Image Container with Badge */}
       <div className="relative w-full h-[140px] md:h-[160px] overflow-hidden rounded-t-[10px]">
         <Image
@@ -200,7 +218,7 @@ export default function ServicesPage() {
           Calibration Services
         </h3>
 
-        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2 h-[36px]">
+        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2">
           Verifying measuring instruments against recognized
           reference standards to ensure accurate, consistent, and
           reliable readings.
@@ -209,24 +227,26 @@ export default function ServicesPage() {
     </div>
 
     {/* Action Link */}
-    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0">
+    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
       <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
         Explore Calibration
         <span className="text-[16px]">&rarr;</span>
       </span>
     </div>
   </Link>
+  </motion.div>
 
   {/* Card 3: Testing Services */}
+  <motion.div variants={staggerItemVariants} className="h-full">
   <Link
     href="/testingservices"
-    className="bg-white rounded-[10px] overflow-hidden flex flex-col group cursor-pointer block hover:shadow-xl transition-shadow"
+    className="bg-white rounded-[10px] overflow-hidden flex flex-col h-full group cursor-pointer block hover:shadow-xl transition-shadow"
     style={{
       border: "1px solid #4343434D",
       boxShadow: "1px 3px 7.5px rgba(1, 40, 109, 0.15)",
     }}
   >
-    <div>
+    <div className="flex-grow">
       {/* Image Container with Badge */}
       <div className="relative w-full h-[140px] md:h-[160px] overflow-hidden rounded-t-[10px]">
         <Image
@@ -260,7 +280,7 @@ export default function ServicesPage() {
           Testing Services
         </h3>
 
-        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2 h-[36px]">
+        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2">
           Verifying the strength, condition, performance, and
           operational safety of industrial equipment, pressure
           systems, pipelines, valves, cylinders, and electrical
@@ -270,24 +290,26 @@ export default function ServicesPage() {
     </div>
 
     {/* Action Link */}
-    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0">
+    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
       <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
         Explore Testing
         <span className="text-[16px]">&rarr;</span>
       </span>
     </div>
   </Link>
+  </motion.div>
 
   {/* Card 4: Training Services */}
+  <motion.div variants={staggerItemVariants} className="h-full">
   <Link
     href="/trainingservices"
-    className="bg-white rounded-[10px] overflow-hidden flex flex-col group cursor-pointer block hover:shadow-xl transition-shadow"
+    className="bg-white rounded-[10px] overflow-hidden flex flex-col h-full group cursor-pointer block hover:shadow-xl transition-shadow"
     style={{
       border: "1px solid #4343434D",
       boxShadow: "1px 3px 7.5px rgba(1, 40, 109, 0.15)",
     }}
   >
-    <div>
+    <div className="flex-grow">
       {/* Image Container with Badge */}
       <div className="relative w-full h-[140px] md:h-[160px] overflow-hidden rounded-t-[10px]">
         <Image
@@ -321,7 +343,7 @@ export default function ServicesPage() {
           Training Services
         </h3>
 
-        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2 h-[36px]">
+        <p className="font-montserrat font-normal text-[#4A5568] text-[11px] lg:text-[11.5px] xl:text-[12px] leading-[1.6] tracking-tight mb-2">
           Industry-focused training programs designed to strengthen
           technical knowledge, practical skills, workplace safety
           and operational awareness.
@@ -330,14 +352,17 @@ export default function ServicesPage() {
     </div>
 
     {/* Action Link */}
-    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0">
+    <div className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
       <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[14px] text-[#FD550A] group-hover:text-[#e04a05] transition-colors">
         Explore Training
         <span className="text-[16px]">&rarr;</span>
       </span>
     </div>
   </Link>
+  </motion.div>
+
 </div>
+</StaggerContainer>
           </div>
         </div>
       </section>

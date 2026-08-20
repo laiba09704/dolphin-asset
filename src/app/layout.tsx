@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
@@ -39,6 +40,7 @@ export default function RootLayout({
   className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} ${montserrat.variable} h-full antialiased`}
 >
       <body className="min-h-full flex flex-col">
+        <ScrollToTop />
         <Navbar />
         {children}
         <Footer />
