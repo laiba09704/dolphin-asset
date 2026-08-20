@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Source_Serif_4, Montserrat } from "next/font/google";
+import AnimatedSection from "./AnimatedSection";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -13,9 +16,10 @@ const montserrat = Montserrat({
 
 export default function Footer() {
   return (
-    <footer className={`w-full bg-[#01286D] text-white ${montserrat.className}`}>
+    <footer className={`w-full bg-[#01286D] text-[#FFFFFF] font-medium ${montserrat.className}`}>
 {/* Top CTA Bar */}
 <div className="flex flex-wrap justify-between items-center gap-4 px-6 xl:px-10 py-12 border-b border-[#FFFFFF33] bg-[linear-gradient(270.1deg,#0F2D5D_12.8%,#113978_45.26%,#0F2D5D_79.77%)]">
+  <AnimatedSection direction="left" delay={0.1}>
   <div className="flex items-center gap-3 xl:ml-24">
     <Image
       src="/images/footer/trust.png"
@@ -36,10 +40,12 @@ export default function Footer() {
       </p>
     </div>
   </div>
+  </AnimatedSection>
 
+  <AnimatedSection direction="right" delay={0.2}>
   <a
     href="/quote"
-    className="flex items-center gap-4 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-[12px] font-semibold px-5 py-3 rounded-lg xl:mr-24 hover:opacity-90 transition whitespace-nowrap"
+    className="flex items-center gap-4 bg-[linear-gradient(269.77deg,#FF6221_3.66%,#D9480D_116.34%)] text-white text-[12px] font-semibold px-5 py-3 rounded-lg xl:mr-24 hover:opacity-90 transition whitespace-nowrap animate-pulse-glow"
   >
     REQUEST A QUOTE
     <Image
@@ -51,11 +57,13 @@ export default function Footer() {
       quality={100}
     />
   </a>
+  </AnimatedSection>
 </div>
 
       {/* Main Footer Columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 xl:px-[136px] pt-10 pb-24 bg-[linear-gradient(330.07deg,#0F2D5D_31.94%,#133772_150.32%)]">
         {/* Column 1 - About */}
+        <AnimatedSection direction="up" delay={0.1}>
         <div>
           <h4 className={`text-xl font-bold ${sourceSerif.className}`}>Dolphin Asset Integrity Solutions</h4>
           <p className="text-[#FD550A] text-[12px] font-medium mt-2 tracking-[0.10em]">
@@ -67,10 +75,12 @@ export default function Footer() {
             calibration, testing and training.
           </p>
         </div>
+        </AnimatedSection>
 
         {/* Column 2 - Service Domains */}
+        <AnimatedSection direction="up" delay={0.2}>
         <div className="lg:ml-20">
-          <h4 className={`text-xl font-bold ${sourceSerif.className}`}>Service Domains</h4>
+          <h4 className={`text-xl font-medium ${sourceSerif.className}`}>Service Domains</h4>
           <ul className="mt-3 flex flex-col gap-3 text-xs text-[#FFFFFF]">
             <li>Inspection &amp; Integrity Assessment</li>
             <li>Calibration Services</li>
@@ -78,8 +88,10 @@ export default function Footer() {
             <li>Training Services</li>
           </ul>
         </div>
+        </AnimatedSection>
 
         {/* Column 3 - Head Office */}
+        <AnimatedSection direction="up" delay={0.3}>
         <div>
           <h4 className={`text-xl font-bold ${sourceSerif.className}`}>Head Office</h4>
           <div className="mt-3 flex flex-col gap-5 text-xs text-[#FFFFFF]">
@@ -138,13 +150,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        </AnimatedSection>
       </div>
 
       {/* Bottom Bar */}
+      <AnimatedSection direction="none" delay={0.2}>
       <div className="flex flex-wrap justify-between items-center gap-3 px-6 xl:px-[136px] pt-6 pb-4 border-t border-[#FFFFFF33] bg-[linear-gradient(330.07deg,#0F2D5D_31.94%,#133772_150.32%)] text-xs text-[#FFFFFF]">
         <p>© 2026.Dolphin Asset Integrity Solutions (Private) Limited-All rights reserved.</p>
         <p>Inspection | Calibration | Testing | Training</p>
       </div>
+      </AnimatedSection>
     </footer>
   );
 }
