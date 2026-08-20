@@ -603,80 +603,82 @@ export default function Home() {
 
       {/* Sublime Family of Dolphin Section */}
       <section
-        className={`w-full bg-white py-16 flex items-center ${montserrat.className}`}
-      >
-        <div className="w-full px-6 xl:px-10 xl:mx-24">
-          <AnimatedSection direction="up">
-            <p className="text-[#FD550A] font-medium text-sm mb-2">
-              Trusted Partner in Asset Integrity
-            </p>
-            <h2
-              className={`text-[#01286D] font-bold text-3xl sm:text-4xl mb-4 ${sourceSerif.className}`}
-            >
-              Sublime Family of Dolphin
-            </h2>
-            <Image
-              src="/images/home/upperboarder.png"
-              alt=""
-              width={60}
-              height={3}
-              className="mb-4"
-            />
-            <p className="text-[#434343] text-[13px] sm:text-[14px] mb-8">
-              A selection of organisations served across energy, process,
-              manufacturing and <br /> infrastructure sectors.
-            </p>
-          </AnimatedSection>
-
-          <div className="flex flex-col gap-8 w-full -ml-4 sm:-ml-6">
-            {[
-              [1, 2, 3, 4, 5, 6, 7, 8, 9],
-              [10, 11, 12, 13, 14, 15, 16, 17],
-              [18, 19, 20, 21, 22, 23, 24, 25, 26],
-              [27, 28, 29, 30, 31, 32, 33, 34, 35],
-              [36, 37, 38, 39, 40, 41, 42, 43, 44],
-              [45, 46, 47, 48, 49, 50, 51, 52, 53],
-              [54, 55, 56, 57, 58, 59, 60],
-            ].map((row, rowIndex) => {
-              const isLastRow = rowIndex === 6;
-              const isLastThreeRows = rowIndex >= 4;
-              return (
-                <StaggerContainer
-                  key={`row-${rowIndex}`}
-                  className={`flex items-center w-full ${
-                    isLastRow ? "justify-start gap-6" : ""
-                  } ${isLastThreeRows ? "ml-3 sm:ml-4" : ""}`}
-                  staggerDelay={0.02}
-                >
-                  {row.map((num) => (
-                    <motion.div
-                      key={`logo-${num}`}
-                      variants={staggerFadeVariants}
-                      whileHover={{ scale: 1.12 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 15,
-                      }}
-                      className={`flex items-center justify-center h-[60px] sm:h-[70px] cursor-pointer ${
-                        isLastRow ? "w-[100px] sm:w-[110px]" : "flex-1 px-2"
-                      }`}
-                    >
-                      <Image
-                        src={`/images/home/logo${num}.png`}
-                        alt={`Partner logo ${num}`}
-                        width={90}
-                        height={50}
-                        className="object-contain w-full h-full transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(253,85,10,0.5)]"
-                      />
-                    </motion.div>
-                  ))}
-                </StaggerContainer>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+             className={`w-full bg-white py-16 pt-2 flex items-center ${montserrat.className}`}
+           >
+             <div className="w-full px-6 xl:px-10 xl:mx-24">
+               <AnimatedSection direction="up">
+                 <p className="text-[#FD550A] font-medium text-sm mb-2">
+                   Trusted Partner in Asset Integrity
+                 </p>
+                 <h2
+                   className={`text-[#01286D] font-bold text-3xl sm:text-4xl mb-4 ${sourceSerif.className}`}
+                 >
+                   Sublime Family of Dolphin
+                 </h2>
+                 <Image
+                   src="/images/home/upperboarder.png"
+                   alt=""
+                   width={60}
+                   height={3}
+                   className="mb-4"
+                 />
+                 <p className="text-[#434343] text-[13px] sm:text-[14px] mb-8">
+                   A selection of organisations served across energy, process,
+                   manufacturing and <br /> infrastructure sectors.
+                 </p>
+               </AnimatedSection>
+     
+               <div className="flex flex-col gap-8 w-full -ml-4 sm:-ml-6">
+                 {[
+                   [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                   [10, 11, 12, 13, 14, 15, 16, 17],
+                   [18, 19, 20, 21, 22, 23, 24, 25, 26],
+                   [27, 28, 29, 30, 31, 32, 33, 34, 35],
+                   [36, 37, 38, 39, 40, 41, 42, 43, 44],
+                   [45, 46, 47, 48, 49, 50, 51, 52, 53],
+                   [54, 55, 56, 57, 58, 59, 60],
+                 ].map((row, rowIndex) => {
+                   const isLastRow = rowIndex === 6;
+                   const isLastThreeRows = rowIndex >= 4;
+                   return (
+                     <StaggerContainer
+                       key={`row-${rowIndex}`}
+                       className={`flex flex-wrap items-center w-full gap-y-4 ${
+                         isLastRow ? "justify-start gap-x-4 sm:gap-x-6" : ""
+                       } ${isLastThreeRows ? "ml-3 sm:ml-4" : ""}`}
+                       staggerDelay={0.02}
+                     >
+                       {row.map((num) => (
+                         <motion.div
+                           key={`logo-${num}`}
+                           variants={staggerFadeVariants}
+                           whileHover={{ scale: 1.12 }}
+                           transition={{
+                             type: "spring",
+                             stiffness: 300,
+                             damping: 15,
+                           }}
+                           className={`flex items-center justify-center h-[50px] sm:h-[60px] md:h-[70px] cursor-pointer ${
+                             isLastRow
+                               ? "w-[80px] sm:w-[100px] md:w-[110px]"
+                               : "w-[60px] sm:w-[80px] md:flex-1 md:w-auto px-1 md:px-2"
+                           }`}
+                         >
+                           <Image
+                             src={`/images/home/logo${num}.png`}
+                             alt={`Partner logo ${num}`}
+                             width={90}
+                             height={50}
+                             className="object-contain w-full h-full transition-all duration-300"
+                           />
+                         </motion.div>
+                       ))}
+                     </StaggerContainer>
+                   );
+                 })}
+               </div>
+             </div>
+           </section>
     </main>
   );
 }
