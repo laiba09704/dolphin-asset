@@ -78,8 +78,8 @@ export default function AboutPage() {
               ensuring the <br />
               safety, integrity and reliability of industrial assets. We provide
               advanced <br />
-              inspection, integrity assessment, calibration, and testing solutions
-              across multiple <br />
+              inspection, integrity assessment, calibration, and testing
+              solutions across multiple <br />
               industries, helping clients maintain operational safety, enhance
               asset <br />
               performance, and extend equipment lifecycle through structured
@@ -117,16 +117,16 @@ export default function AboutPage() {
                 </div>
 
                 <p className="font-normal text-[#4A4A4A] text-[13px] leading-[175%] tracking-[1%] mb-8 text-justify">
-                  Dolphin Asset Integrity Solutions (Private) Limited (DAIS) is a
-                  professional <br />
-                  engineering and asset integrity services company specializing in
-                  ensuring the <br />
+                  Dolphin Asset Integrity Solutions (Private) Limited (DAIS) is
+                  a professional <br />
+                  engineering and asset integrity services company specializing
+                  in ensuring the <br />
                   safety, integrity and reliability of industrial assets. We
                   provide advanced <br />
                   inspection, integrity assessment, calibration, and testing
                   solutions across multiple <br />
-                  industries, helping clients maintain operational safety, enhance
-                  asset <br />
+                  industries, helping clients maintain operational safety,
+                  enhance asset <br />
                   performance, and extend equipment lifecycle through structured
                   engineering <br />
                   practices and adherence to international standards.
@@ -185,8 +185,8 @@ export default function AboutPage() {
                 </div>
 
                 <p className="font-normal text-[#434343] text-[13px] leading-[175%] tracking-[0%] text-justify mb-8">
-                  With an established client base and successful operations under
-                  DES — Dolphin <br />
+                  With an established client base and successful operations
+                  under DES — Dolphin <br />
                   Engineering Solutions — we are now expanding our capabilities
                   through DAIS: a <br />
                   new identity designed to serve clients while building on
@@ -239,7 +239,11 @@ export default function AboutPage() {
         <div className="w-full px-6 xl:px-10">
           <div className="xl:ml-24 xl:mr-24 h-auto lg:h-[320px] bg-white border-[0.5px] border-[#d1d5db] rounded-[13px] flex flex-col lg:flex-row items-center overflow-hidden shadow-sm">
             {/* Mission Card (Left Half) */}
-            <AnimatedSection direction="left" delay={0.2} className="w-full lg:w-1/2 h-full">
+            <AnimatedSection
+              direction="left"
+              delay={0.2}
+              className="w-full lg:w-1/2 h-full"
+            >
               <div className="w-full h-full bg-white p-8 md:p-10 relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r-[0.5px] border-[#d1d5db]">
                 <div className="absolute right-8 -top-4 pointer-events-none select-none opacity-40 text-right">
                   <span
@@ -280,17 +284,22 @@ export default function AboutPage() {
                   style={{ transform: "translateY(-25px)" }}
                 >
                   <p className="font-normal text-[#4A4A4A] text-[13px] leading-[200%] tracking-[1%] text-justify">
-                    To deliver world-class asset integrity solutions that enhance
-                    operational safety, extend asset life, and reduce industrial
-                    risk through advanced engineering practices, technical
-                    excellence, and adherence to international standards.
+                    To deliver world-class asset integrity solutions that
+                    enhance operational safety, extend asset life, and reduce
+                    industrial risk through advanced engineering practices,
+                    technical excellence, and adherence to international
+                    standards.
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
             {/* Vision Card (Right Half) */}
-            <AnimatedSection direction="right" delay={0.3} className="w-full lg:w-1/2 h-full">
+            <AnimatedSection
+              direction="right"
+              delay={0.3}
+              className="w-full lg:w-1/2 h-full"
+            >
               <div
                 className="w-full h-full p-8 md:p-10 relative flex flex-col justify-between"
                 style={{ backgroundColor: "#E9F3FF80" }}
@@ -537,7 +546,7 @@ export default function AboutPage() {
                     Director Commercial
                   </span>
                   <h3
-                    className={`${sourceSerif.className} font-bold text-[30px] sm:text-[34px] leading-[115%] text-[#01286D] whitespace-nowrap`}
+                    className={`${sourceSerif.className} font-bold text-[22px] xs:text-[26px] sm:text-[30px] md:text-[34px] leading-[115%] text-[#01286D] whitespace-normal sm:whitespace-nowrap`}
                   >
                     Rana Muhammad Hamad
                   </h3>
@@ -620,8 +629,8 @@ export default function AboutPage() {
             <AnimatedSection direction="up" delay={0.3}>
               <div className="mt-12 pl-4 border-l-4 border-[#FD550A]">
                 <p className="font-normal text-[#555555] text-[13.5px] sm:text-[14px] leading-[170%] max-w-3xl">
-                  With an established client base and successful operations under
-                  DES, we are now expanding our <br />
+                  With an established client base and successful operations
+                  under DES, we are now expanding our <br />
                   capabilities through DAIS — a new identity designed to serve
                   clients while building on enhanced <br />
                   technical expertise and our team.
@@ -656,8 +665,8 @@ export default function AboutPage() {
                 </div>
                 <p className="font-normal text-[#434343] text-[14px] leading-[175%] max-w-3xl">
                   DAIS supports industries where equipment safety, operational
-                  continuity, accurate <br /> measurement, regulatory compliance,
-                  and asset reliability are critical.
+                  continuity, accurate <br /> measurement, regulatory
+                  compliance, and asset reliability are critical.
                 </p>
               </div>
             </AnimatedSection>
@@ -737,80 +746,82 @@ export default function AboutPage() {
 
       {/* Section 8: Sublime Family of Dolphin */}
       <section
-             className={`w-full bg-white py-16 pt-2 flex items-center ${montserrat.className}`}
-           >
-             <div className="w-full px-6 xl:px-10 xl:mx-24">
-               <AnimatedSection direction="up">
-                 <p className="text-[#FD550A] font-medium text-sm mb-2">
-                   Trusted Partner in Asset Integrity
-                 </p>
-                 <h2
-                   className={`text-[#01286D] font-bold text-3xl sm:text-4xl mb-4 ${sourceSerif.className}`}
-                 >
-                   Sublime Family of Dolphin
-                 </h2>
-                 <Image
-                   src="/images/home/upperboarder.png"
-                   alt=""
-                   width={60}
-                   height={3}
-                   className="mb-4"
-                 />
-                 <p className="text-[#434343] text-[13px] sm:text-[14px] mb-8">
-                   A selection of organisations served across energy, process,
-                   manufacturing and <br /> infrastructure sectors.
-                 </p>
-               </AnimatedSection>
-     
-               <div className="flex flex-col gap-8 w-full -ml-4 sm:-ml-6">
-                 {[
-                   [1, 2, 3, 4, 5, 6, 7, 8, 9],
-                   [10, 11, 12, 13, 14, 15, 16, 17],
-                   [18, 19, 20, 21, 22, 23, 24, 25, 26],
-                   [27, 28, 29, 30, 31, 32, 33, 34, 35],
-                   [36, 37, 38, 39, 40, 41, 42, 43, 44],
-                   [45, 46, 47, 48, 49, 50, 51, 52, 53],
-                   [54, 55, 56, 57, 58, 59, 60],
-                 ].map((row, rowIndex) => {
-                   const isLastRow = rowIndex === 6;
-                   const isLastThreeRows = rowIndex >= 4;
-                   return (
-                     <StaggerContainer
-                       key={`row-${rowIndex}`}
-                       className={`flex items-center w-full ${
-                         isLastRow ? "justify-start gap-6" : ""
-                       } ${isLastThreeRows ? "ml-3 sm:ml-4" : ""}`}
-                       staggerDelay={0.02}
-                     >
-                       {row.map((num) => (
-                         <motion.div
-                           key={`logo-${num}`}
-                           variants={staggerFadeVariants}
-                           whileHover={{ scale: 1.12 }}
-                           transition={{
-                             type: "spring",
-                             stiffness: 300,
-                             damping: 15,
-                           }}
-                           className={`flex items-center justify-center h-[60px] sm:h-[70px] cursor-pointer ${
-                             isLastRow ? "w-[100px] sm:w-[110px]" : "flex-1 px-2"
-                           }`}
-                         >
-                           <Image
-                             src={`/images/home/logo${num}.png`}
-                             alt={`Partner logo ${num}`}
-                             width={90}
-                             height={50}
-                             className="object-contain w-full h-full transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(253,85,10,0.5)]"
-                           />
-                         </motion.div>
-                       ))}
-                     </StaggerContainer>
-                   );
-                 })}
-               </div>
-             </div>
-           </section>
+        className={`w-full bg-white py-16 pt-2 flex items-center ${montserrat.className}`}
+      >
+        <div className="w-full px-6 xl:px-10 xl:mx-24">
+          <AnimatedSection direction="up">
+            <p className="text-[#FD550A] font-medium text-sm mb-2">
+              Trusted Partner in Asset Integrity
+            </p>
+            <h2
+              className={`text-[#01286D] font-bold text-3xl sm:text-4xl mb-4 ${sourceSerif.className}`}
+            >
+              Sublime Family of Dolphin
+            </h2>
+            <Image
+              src="/images/home/upperboarder.png"
+              alt=""
+              width={60}
+              height={3}
+              className="mb-4"
+            />
+            <p className="text-[#434343] text-[13px] sm:text-[14px] mb-8">
+              A selection of organisations served across energy, process,
+              manufacturing and <br /> infrastructure sectors.
+            </p>
+          </AnimatedSection>
+
+          <div className="flex flex-col gap-8 w-full -ml-4 sm:-ml-6">
+            {[
+              [1, 2, 3, 4, 5, 6, 7, 8, 9],
+              [10, 11, 12, 13, 14, 15, 16, 17],
+              [18, 19, 20, 21, 22, 23, 24, 25, 26],
+              [27, 28, 29, 30, 31, 32, 33, 34, 35],
+              [36, 37, 38, 39, 40, 41, 42, 43, 44],
+              [45, 46, 47, 48, 49, 50, 51, 52, 53],
+              [54, 55, 56, 57, 58, 59, 60],
+            ].map((row, rowIndex) => {
+              const isLastRow = rowIndex === 6;
+              const isLastThreeRows = rowIndex >= 4;
+              return (
+                <StaggerContainer
+                  key={`row-${rowIndex}`}
+                  className={`flex flex-wrap items-center w-full gap-y-4 ${
+                    isLastRow ? "justify-start gap-x-4 sm:gap-x-6" : ""
+                  } ${isLastThreeRows ? "ml-3 sm:ml-4" : ""}`}
+                  staggerDelay={0.02}
+                >
+                  {row.map((num) => (
+                    <motion.div
+                      key={`logo-${num}`}
+                      variants={staggerFadeVariants}
+                      whileHover={{ scale: 1.12 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 15,
+                      }}
+                      className={`flex items-center justify-center h-[50px] sm:h-[60px] md:h-[70px] cursor-pointer ${
+                        isLastRow
+                          ? "w-[80px] sm:w-[100px] md:w-[110px]"
+                          : "w-[60px] sm:w-[80px] md:flex-1 md:w-auto px-1 md:px-2"
+                      }`}
+                    >
+                      <Image
+                        src={`/images/home/logo${num}.png`}
+                        alt={`Partner logo ${num}`}
+                        width={90}
+                        height={50}
+                        className="object-contain w-full h-full transition-all duration-300"
+                      />
+                    </motion.div>
+                  ))}
+                </StaggerContainer>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
