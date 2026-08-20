@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "none" | "scale";
@@ -15,7 +15,7 @@ interface AnimatedSectionProps {
   amount?: number;
 }
 
-const getVariants = (direction: Direction) => {
+const getVariants = (direction: Direction): Variants => {
   const distance = 60;
 
   switch (direction) {
